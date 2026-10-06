@@ -7,6 +7,10 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
+# Earlier local prototypes and notebooks
+/app.py
+/Lesson 1 Score Parsing.ipynb
+
 # Local configuration and secrets
 .env
 .env.*

@@ -1,6 +1,6 @@
-# Vanilla Music
+# Beyond The score
 
-Vanilla Music is a local web application for practicing a piano score by ear. A player can listen to the right hand, the left hand, or both hands; choose an exact range of measures; slow down or speed up playback; and change the balance between the hands. The goal is to make a written score easier to study one passage at a time.
+Beyond The score is a local web application for practicing a piano score by ear. A player can listen to the right hand, the left hand, or both hands; choose an exact range of measures; slow down or speed up playback; and change the balance between the hands. The goal is to make a written score easier to study one passage at a time.
 
 The current prototype uses a 24-measure piano piece labeled **Allegretto**. Its source was a scanned image of sheet music. We used the open-source [Audiveris optical music recognition (OMR) project](https://github.com/Audiveris/audiveris) to convert that image into the MusicXML file used by the app. Audiveris is part of the score-preparation workflow; it does not need to run when someone uses the website.
 
@@ -59,26 +59,26 @@ Audiveris OMR → MusicXML (.mxl)
 ## Project files
 
 ```text
-Vanilla_Music/
+project-root/
 ├── gradio_app.py                  # Current website and audio-rendering logic
 ├── allegretto_audiveris.mxl      # Audiveris MusicXML output used by the app
-├── Lesson 1 Score Parsing.ipynb  # Score exploration and prototype exercises
 ├── requirements.txt              # Python dependencies
+├── README.md                     # Project documentation
+├── .gitignore                    # Local files excluded from Git
 ├── tools/
 │   ├── GeneralUser-GS.sf2        # General MIDI SoundFont
 │   └── fluidsynth-.../bin/       # Local Windows FluidSynth executable
-├── app.py                        # Earlier Flask prototype
-├── src/                          # Earlier HTML/CSS/JavaScript prototype
-└── .venv/                        # Local Python virtual environment
+└── src/                          # Earlier HTML/CSS/JavaScript prototype
 ```
 
-The Gradio app is the current website. `app.py` and `src/` are retained as earlier prototypes; they are not required to start the current interface.
+The Gradio app is the current website. The local notebook (`Lesson 1 Score Parsing.ipynb`), earlier Flask prototype (`app.py`), and Python virtual environment (`.venv/`) are excluded from Git by `.gitignore`. The notebook and Flask prototype may still exist on the development computer; neither is required to start the current website. `src/` is an earlier frontend prototype.
 
 ## Run locally on Windows
 
 From PowerShell in this folder:
 
 ```powershell
+py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe gradio_app.py
 ```
