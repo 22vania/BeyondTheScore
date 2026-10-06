@@ -1,0 +1,27 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Generated playback and temporary audio
+*.mid
+*.wav
+*.tmp
+
+# Download archives; keep extracted project tools available if desired
+tools/*.zip
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

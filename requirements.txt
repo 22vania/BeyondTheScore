@@ -1,0 +1,12 @@
+# Python dependencies for Lesson 1 Score Parsing.ipynb.
+# Versions are unpinned because the notebook does not specify them.
+music21
+ipython
+Flask
+gradio
+numpy
+
+# google.colab is provided by Google Colab. Running locally requires
+# replacing the Colab drive.mount() call and /content/drive paths.
+# External system dependencies (install separately, not through pip):
+# fluidsynth, fluid-soundfont-gm, musescore3, xvfb, libfontconfig1
